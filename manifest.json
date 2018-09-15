@@ -1,0 +1,57 @@
+//  This file is part of PhishingBlocker.
+
+// PhishingBlocker is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// PhishingBlocker is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License
+// along with PhishingBlocker.  If not, see <https://www.gnu.org/licenses/>.
+
+// Copyright 2018 Hjok
+
+{
+"description": "This extension detects websites trying to pretend to be someone else. It spots attacks by homography and address masking.",
+"manifest_version": 2,
+"name": "Phishing Blocker",
+"version": "1.0",
+"icons": {
+    "48": "icons/stop_phishing.svg"
+},
+
+"applications": {
+    "gecko": {
+        "id": "phishingblocker@mozilla.org",
+        "strict_min_version": "62.0"
+    }
+},
+
+"permissions": [
+    "tabs",
+    "<all_urls>",
+    "storage"
+],
+
+"page_action": {
+  "browser_style": true,
+  "default_icon": "icons/warning.svg",
+  "default_title": "This page has been detected as phishing",
+  "default_popup": "popups/trust_site.html"
+},
+
+"background": {
+  "scripts": ["background.js", "punycode/punycode.js"]
+ },
+
+"content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": ["certs.js"]
+    }
+]
+}
