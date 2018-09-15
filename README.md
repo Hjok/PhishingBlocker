@@ -12,4 +12,8 @@ At the times homography and adress masking attacks are detected.
 Icons made by https://www.flaticon.com/authors/freepik https://www.flaticon.com/authors/maxim-basinski and https://www.flaticon.com/authors/roundicons
 PhishingBlocker rely on punycode. It's license (MIT) is availible in the punycode directory. PhishingBlocker itself is under GPL (see LICENCE).
 
+## Contact
+
+You can contact the author at hjok@gmx.com
+
 Copyright 2018 Hjok

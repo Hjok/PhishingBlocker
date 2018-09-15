@@ -26,7 +26,7 @@
 
 "applications": {
     "gecko": {
-        "id": "phishingblocker@mozilla.org",
+        "id": "phishingblocker@hjok.com",
         "strict_min_version": "62.0"
     }
 },
